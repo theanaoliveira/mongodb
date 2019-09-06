@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  mongodb-webapi:
+    image: ${DOCKER_REGISTRY-}mongodb-webapi
+    build:
+      context: .
+      dockerfile: MongoDB.Webapi/Dockerfile
