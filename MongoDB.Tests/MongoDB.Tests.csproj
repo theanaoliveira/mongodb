@@ -12,4 +12,11 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MongoDB.Application\MongoDB.Application.csproj" />
+    <ProjectReference Include="..\MongoDB.Domain\MongoDB.Domain.csproj" />
+    <ProjectReference Include="..\MongoDB.Infrastructure\MongoDB.Infrastructure.csproj" />
+    <ProjectReference Include="..\MongoDB.Webapi\MongoDB.Webapi.csproj" />
+  </ItemGroup>
+
 </Project>

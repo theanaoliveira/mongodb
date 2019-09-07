@@ -2,6 +2,9 @@ version: '3.7'
 
 services:
   mongodb-webapi:
+    environment:
+      MONGO_CONN: "mongodb://root:root@mongodb:27017/clients"
+      MONGO_DATABASE: "clients"
     ports:
       - 8080:80
     networks:
@@ -19,8 +22,10 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: root
     networks:
       - mongodb-network
+    depends_on:
+      - mongodb
 
-  mongo:
+  mongodb:
     image: mongo:latest
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
